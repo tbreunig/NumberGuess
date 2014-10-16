@@ -3,10 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Number Guess!    </title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h:form id="numberGuessForm">
+            <h:panelGrid columns="2">
+                <h:outputText value="Enter your guess:"/>
+                <h:inputText id="namedEntry" value="#{numberGuessBean.guess}"/>
+                <h:commandButton value="Submit name" action="#{numberGuessBean.checkGuess()}"/>
+                <h:outputText id="finalMessage" value="#{numberGuessBean.finalMessage}"/>
+            </h:panelGrid>
+        </h:form>
     </h:body>
 </html>
 
